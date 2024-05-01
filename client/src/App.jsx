@@ -11,11 +11,11 @@ import RightPanel from "./components/common/RightPanel";
 
 function App() {
 	return (
+	
 	<div className="w-full  max-w-7xl">
 		
-		<tobbar/>
 		<div className='flex w-full mx-auto'>
-			
+		
 			<Routes>
 				<Route path='/' element={<HomePage />} />
 				<Route path='/signup' element={<SignUpPage />} />
