@@ -3,9 +3,9 @@ import LoadingSpinner from "../../components/common/LoadingSpinner";
 import { IoSettingsOutline } from "react-icons/io5";
 import { FaUser } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa6";
-import tobbar from "../../components/common/tobbar";
-import {Sidebar} from "../../components/common/Sidebar"
-import RightPanel from "../../components/common/RightPanel";
+
+import {Sidebar} from "../../components/common/Sidebar";
+
 
 const NotificationPage = () => {
 	const isLoading = false;
@@ -35,28 +35,35 @@ const NotificationPage = () => {
 	};
 
 	return (
-		<>
+	<>
+		<Sidebar/>		
+		<div className='flex-[4_4_0]  rounded-2xl shadow-2xl m-auto min-h-screen overflow-x-hidden'>
+		
+						<div className="navbar bg-base-100">
+						
+			<div className="flex-1 ">
+			
+				<a className="btn btn-ghost text-xl">EduConnect</a>
+			</div>
+		
+			<div className="flex-none gap-2">
+		
+				<div className="form-control">
+				<input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
+				</div>
+				<div className="dropdown dropdown-end">
+				<div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+					<div className="w-10 rounded-full">
+					<img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+					</div>
+				</div>
+					</div>
+					
+				</div>
 				
-			<div className='flex-[4_4_0]  rounded-2xl shadow-2xl m-auto min-h-screen'>
-			<div className="navbar bg-base-100">
-  <div className="flex-1">
-    <a className="btn btn-ghost text-xl">EduConnect</a>
-  </div>
-  <div className="flex-none gap-2">
-    <div className="form-control">
-      <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
-    </div>
-    <div className="dropdown dropdown-end">
-      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-        <div className="w-10 rounded-full">
-          <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-        </div>
-      </div>
-      
-    </div>
-  </div>
-</div>
-			<tobbar/><div className= ' flex justify-between p-4 rounded-lg shadow-2xl'>
+				</div>
+					
+				<div className= ' flex justify-between p-4 rounded-lg shadow-2xl '>
 					<p className='font-bold ml-96 '>Notifications</p>
 					<div className='dropdown '>
 						<div tabIndex={0} role='button' className='m-1'>
@@ -97,8 +104,9 @@ const NotificationPage = () => {
 						</div>
 					</div>
 				))}
+				
 			</div>
-			<RightPanel/>
+			
 		</>
 	);
 };
