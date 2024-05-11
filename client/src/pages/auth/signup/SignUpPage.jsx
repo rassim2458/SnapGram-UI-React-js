@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+//import  {ProfileCard} from "../../../components/common/ProfileCard "
 
 import { MdOutlineMail } from "react-icons/md";
 import { FaUser } from "react-icons/fa";
 import { MdPassword } from "react-icons/md";
 import { MdDriveFileRenameOutline } from "react-icons/md";
+import  Logo  from "../../../components/svgs/Logo";
 
 const SignUpPage = () => {
 	const [formData, setFormData] = useState({
@@ -26,10 +28,13 @@ const SignUpPage = () => {
 	const isError = false;
 
 	return (
-		<div className='max-w-screen-xl mx-auto flex h-screen px-10'>
-			 <div className='flex-1 hidden lg:flex items-center  justify-center'>
-				<XSvg className=' lg:w-2/3 fill-white' />
-			</div> 
+		<div className='max-w-screen-xl mx-auto flex flex-col sm:flex-row px-10'>
+			
+			
+			 <div className='flex-1 flex  items-center  justify-center'>
+				<Logo/>
+			</div>
+			
 			<div className='flex-1 flex flex-col justify-center items-center'>
 				<form className='lg:w-2/3  mx-auto md:mx-20 flex gap-4 flex-col' onSubmit={handleSubmit}>
 					{/* PUT THE LOGO HERE TODO */}
@@ -48,6 +53,7 @@ const SignUpPage = () => {
 					<div className='flex gap-4 flex-wrap'>
 						<label className='input input-bordered rounded flex items-center gap-2 flex-1'>
 							<FaUser />
+							
 							<input
 								type='text'
 								className='grow '
@@ -57,6 +63,7 @@ const SignUpPage = () => {
 								value={formData.username}
 							/>
 						</label>
+						
 						<label className='input input-bordered rounded flex items-center gap-2 flex-1'>
 							<MdDriveFileRenameOutline />
 							<input

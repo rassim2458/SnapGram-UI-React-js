@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import Posts from "../../components/common/Posts";
 import ProfileHeaderSkeleton from "../../components/skeletons/ProfileHeaderSkeleton";
 import EditProfileModal from "./EditProfileModal";
+import {ProfileCard} from "../../components/common/ProfileCard ";
+import RightPanel from "../../components/common/RightPanel";
 
 import { POSTS } from "../../utils/db/dummy";
 
@@ -11,6 +13,8 @@ import { FaArrowLeft } from "react-icons/fa6";
 import { IoCalendarOutline } from "react-icons/io5";
 import { FaLink } from "react-icons/fa";
 import { MdEdit } from "react-icons/md";
+//link with Issam's backend
+// import axios from 'axios';
 
 const ProfilePage = () => {
 	const [coverImg, setCoverImg] = useState(null);
@@ -20,13 +24,15 @@ const ProfilePage = () => {
 	const coverImgRef = useRef(null);
 	const profileImgRef = useRef(null);
 
-	const isLoading = false;
+	
 	const isMyProfile = true;
-
+	const [isLoading, setIsLoading] = useState(false);//change to true for loading effect
+	//const [user, setUser] = useState(null);
+//replace 
 	const user = {
 		_id: "1",
-		fullName: "issam",
-		username: "merighed",
+		fullName: "jon doe",
+		username: "JonDoe",
 		profileImg: "/avatars/boy2.png",
 		coverImg: "/cover.png",
 		bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -46,11 +52,26 @@ const ProfilePage = () => {
 			reader.readAsDataURL(file);
 		}
 	};
+	// useEffect(() => {
+	// 	const fetchUserData = async () => {
+	// 	  try {
+	// 		//link API 
+	// 		const res = await axios.get("http://backend.com/user");
+	// 		setUser(res.data);
+	// 		setIsLoading(false);
+	// 	  } catch (error) {
+	// 		console.error(`Failed to fetch user data: ${error}`);
+	// 	  }
+	// 	}
+	// 	fetchUserData();
+	//   }, []);
+	
 
 	return (
 		<>
-			<div className='flex-[4_4_0]  border-r  min-h-screen '>
+			<div className='flex-[4_4_0] mr-9  min-h-screen '>
 				{/* HEADER */}
+			
 				{isLoading && <ProfileHeaderSkeleton />}
 				{!isLoading && !user && <p className='text-center text-lg mt-4'>User not found</p>}
 				<div className='flex flex-col'>
@@ -141,12 +162,12 @@ const ProfilePage = () => {
 											<>
 												<FaLink className='w-3 h-3 text-slate-500' />
 												<a
-													href='https://youtube.com/@asaprogrammer_'
+													href='https://youtube.com'
 													target='_blank'
 													rel='noreferrer'
 													className='text-sm text-blue-500 hover:underline'
 												>
-													youtube.com/@asaprogrammer_
+													Loremipsudolorsit amet.com
 												</a>
 											</>
 										</div>
@@ -192,7 +213,19 @@ const ProfilePage = () => {
 
 					<Posts />
 				</div>
+					
 			</div>
+			<div className="flex-1 place right-0">
+						<div>
+							{/* <ProfileCard
+								imageSrc="put link"
+								username="John Doe"
+								email="johndoe@example.com"
+								description="Enthusiastic developer and lifelong learner."
+							/> 
+							<RightPanel/> */}
+						</div>
+					</div>
 		</>
 	);
 };

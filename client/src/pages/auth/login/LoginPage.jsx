@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import XSvg from "../../../components/svgs/X";
+import Logo from "../../../components/svgs/Logo";
 
 import { MdOutlineMail } from "react-icons/md";
 import { MdPassword } from "react-icons/md";
@@ -24,10 +24,12 @@ const LoginPage = () => {
 	const isError = false;
 
 	return (
-		<div className='max-w-screen-xl mx-auto flex h-screen'>
-			{/* <div className='flex-1 hidden lg:flex items-center  justify-center'>
-				<XSvg className='lg:w-2/3 fill-white' />
-			</div> */}
+		<div className='max-w-screen-xl mx-auto self-center flex flex-col sm:flex-row '>
+			
+			<div className='flex-1 flex  items-center justify-center'>
+			<Logo/>
+			</div>
+			
 			<div className='flex-1 flex flex-col justify-center items-center'>
 				<form className='flex gap-4 flex-col' onSubmit={handleSubmit}>
 					
