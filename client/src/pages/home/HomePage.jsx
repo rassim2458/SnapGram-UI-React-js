@@ -1,6 +1,9 @@
 	import { useState } from "react";
 	import Posts from "../../components/common/Posts";
 	import CreatePost from "./CreatePost";
+	import { ProfileCard } from "../../components/common/ProfileCard ";
+// import ProfileCard from "./components/common/ProfileCard ";
+import RightPanel from "../../components/common/RightPanel";
 	// import RightPanel from "../../components/common/RightPanel.jsx";
 	// import { Sidebar } from "../../components/common/Sidebar";
 	// import { ProfileCard } from "../../components/common/ProfileCard .jsx";
@@ -67,13 +70,13 @@
 			</div>
 			
 			</div>
-
+ 
 			{/*  CREATE POST INPUT */}
 			<CreatePost />
 
 			{/* POSTS */}
 			<Posts />
-			
+		
 			</div>
 			
 	</div>
@@ -92,6 +95,15 @@
 			</div>
 			</div>
 		</div>
+		<div className="fixed top-20 right-4">
+			<ProfileCard
+				imageSrc="/avatar-placeholder.png"
+				username="issam"
+				email="issam@example.com"
+				description="web app dev ..."
+			/>  
+			  <RightPanel />  
+			</div> 
 	</>
 		);
 	};

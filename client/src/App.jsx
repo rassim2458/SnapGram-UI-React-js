@@ -11,16 +11,21 @@ import {Sidebar} from "./components/common/Sidebar";
 import { ProfileCard } from "./components/common/ProfileCard ";
 // import ProfileCard from "./components/common/ProfileCard ";
 import RightPanel from "./components/common/RightPanel";
+import GeneralApp from "./pages/Chat.jsx/Index";
+
 
 function App() {
 	return(<>
 
 	
-   
+   <div className="fixed top-0 right-5 size-full ">
              <Topbar/>
-     <div className='flex justify-around max-w-full mx-auto'>
-            <div className=" static">
+    </div>
+     <div className=' flex justify-around max-w-full mx-auto'>
+     
+            <div className="fixed top-20 left-4 ">
                 <Sidebar/>
+           
             </div>
        		<div className="">
             <Routes>
@@ -29,6 +34,7 @@ function App() {
                 <Route path='/login' element={<LoginPage />} />
                 <Route path='/notifications' element={<NotificationPage/>}/>
                 <Route path='/Profile/:username' element={<ProfilePage />} />
+                <Route path='/messages' element={<GeneralApp />} />
             </Routes>
             </div>
                     {/* 
@@ -39,17 +45,12 @@ function App() {
                     
                     TODO tobbar isn't working
                     */}
-                <div className="">
-                <ProfileCard
-					imageSrc="put link"
-					username="John Doe"
-					email="johndoe@example.com"
-					description="Enthusiastic developer and lifelong learner."
-				/> 
-				<RightPanel/>
-                </div>
+            
+
+
+		
         </div>
-    
+
 	</>
 	);
 }

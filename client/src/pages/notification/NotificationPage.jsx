@@ -3,6 +3,9 @@ import LoadingSpinner from "../../components/common/LoadingSpinner";
 import { IoSettingsOutline } from "react-icons/io5";
 import { FaUser } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa6";
+import { ProfileCard } from "../../components/common/ProfileCard ";
+// import ProfileCard from "./components/common/ProfileCard ";
+import RightPanel from "../../components/common/RightPanel";
 
 
 
@@ -10,6 +13,96 @@ import { FaHeart } from "react-icons/fa6";
 const NotificationPage = () => {
 	const isLoading = false;
 	const notifications = [
+		{
+			_id: "1",
+			from: {
+				_id: "1",
+				username: "johndoe",
+				profileImg: "/avatars/boy2.png",
+			},
+			type: "follow",
+		},
+		{
+			_id: "2",
+			from: {
+				_id: "2",
+				username: "janedoe",
+				profileImg: "/avatars/girl1.png",
+			},
+			type: "like",
+		},
+		{
+			_id: "1",
+			from: {
+				_id: "1",
+				username: "johndoe",
+				profileImg: "/avatars/boy2.png",
+			},
+			type: "follow",
+		},
+		{
+			_id: "2",
+			from: {
+				_id: "2",
+				username: "janedoe",
+				profileImg: "/avatars/girl1.png",
+			},
+			type: "like",
+		},
+		{
+			_id: "1",
+			from: {
+				_id: "1",
+				username: "johndoe",
+				profileImg: "/avatars/boy2.png",
+			},
+			type: "follow",
+		},
+		{
+			_id: "2",
+			from: {
+				_id: "2",
+				username: "janedoe",
+				profileImg: "/avatars/girl1.png",
+			},
+			type: "like",
+		},
+		{
+			_id: "1",
+			from: {
+				_id: "1",
+				username: "johndoe",
+				profileImg: "/avatars/boy2.png",
+			},
+			type: "follow",
+		},
+		{
+			_id: "2",
+			from: {
+				_id: "2",
+				username: "janedoe",
+				profileImg: "/avatars/girl1.png",
+			},
+			type: "like",
+		},
+		{
+			_id: "1",
+			from: {
+				_id: "1",
+				username: "johndoe",
+				profileImg: "/avatars/boy2.png",
+			},
+			type: "follow",
+		},
+		{
+			_id: "2",
+			from: {
+				_id: "2",
+				username: "janedoe",
+				profileImg: "/avatars/girl1.png",
+			},
+			type: "like",
+		},
 		{
 			_id: "1",
 			from: {
@@ -81,6 +174,15 @@ const NotificationPage = () => {
 				))}
 				
 			</div>
+			<div className="fixed top-20 right-4">
+			<ProfileCard
+				imageSrc="/avatar-placeholder.png"
+				username="issam"
+				email="issam@example.com"
+				description="web app dev ..."
+			/>  
+			  <RightPanel />  
+			</div> 
 			
 		</>
 	);
