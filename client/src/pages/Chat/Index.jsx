@@ -11,7 +11,8 @@ const GeneralApp = () => {
   const theme = useTheme();
 // access our store inside component
   return (
-    <Stack direction='row' sx={{ width: '100%' }}>
+    <div className="fixed top-20 right-3">
+    <Stack direction='row' sx={{ width: '90%' }}>
       {/* Chats */}
       <Chats />
 
@@ -23,7 +24,7 @@ const GeneralApp = () => {
       {/* Contact */}
       
      
-    </Stack>
+    </Stack></div>
   );
 };
 

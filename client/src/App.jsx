@@ -11,7 +11,7 @@ import {Sidebar} from "./components/common/Sidebar";
 import { ProfileCard } from "./components/common/ProfileCard ";
 // import ProfileCard from "./components/common/ProfileCard ";
 import RightPanel from "./components/common/RightPanel";
-import GeneralApp from "./pages/Chat.jsx/Index";
+import GeneralApp from "./pages/Chat/Index";
 
 
 function App() {
@@ -34,7 +34,7 @@ function App() {
                 <Route path='/login' element={<LoginPage />} />
                 <Route path='/notifications' element={<NotificationPage/>}/>
                 <Route path='/Profile/:username' element={<ProfilePage />} />
-                <Route path='/messages' element={<GeneralApp />} />
+                <Route path='/messages' element={<GeneralApp className="fixed top-100" />} />
             </Routes>
             </div>
                     {/* 
